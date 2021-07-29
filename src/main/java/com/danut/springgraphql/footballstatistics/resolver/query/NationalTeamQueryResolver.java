@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-public class NationalTeamQuery implements GraphQLQueryResolver {
+public class NationalTeamQueryResolver implements GraphQLQueryResolver {
     private final NationalTeamRepository repository;
 
-    public NationalTeamQuery(NationalTeamRepository repository) {
+    public NationalTeamQueryResolver(NationalTeamRepository repository) {
         this.repository = repository;
     }
 

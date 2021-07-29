@@ -6,11 +6,11 @@ import graphql.kickstart.tools.GraphQLMutationResolver;
 import org.springframework.stereotype.Component;
 
 @Component
-public class NationalTeamMutation implements GraphQLMutationResolver {
+public class NationalTeamMutationResolver implements GraphQLMutationResolver {
 
     public final NationalTeamRepository repository;
 
-    public NationalTeamMutation(NationalTeamRepository repository) {
+    public NationalTeamMutationResolver(NationalTeamRepository repository) {
         this.repository = repository;
     }
 
