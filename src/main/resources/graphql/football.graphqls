@@ -1,0 +1,52 @@
+
+type Query {
+    allNationalTeams: [NationalTeam]
+    nationalTeam(id: ID!): NationalTeam
+}
+
+type NationalTeam {
+    id: String!
+    name: String!
+    fifaRanking: Int
+    averageAge: Float
+    coach: Coach!
+    captain: Player!
+    players: [Player]!
+}
+
+type Coach {
+    firstName: String!
+    lastName: String!
+    age: Int!
+    nationality: String!
+}
+
+type Player {
+    id: ID
+    firstName: String!
+    lastName: String!
+    dob: String!
+    age: Int!
+    height: Float
+    debut: String
+    position: String
+    caps: Int
+    goals: Int
+    club: Club
+}
+
+type Club {
+    name: String
+    country: String
+}
+
+type Mutation {
+    createNationalTeam(input: NationalTeamInput!): NationalTeam
+}
+
+input NationalTeamInput {
+    id: String!
+    name: String!
+    fifaRanking: Int
+    averageAge: Float
+}
