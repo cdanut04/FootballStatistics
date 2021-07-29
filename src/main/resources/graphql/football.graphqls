@@ -1,10 +1,10 @@
 
 type Query {
-    allNationalTeams: [NationalTeam]
-    nationalTeam(id: ID!): NationalTeam
+    allNationalTeams: [FootballTeam]
+    nationalTeam(id: ID!): FootballTeam
 }
 
-type NationalTeam {
+type FootballTeam {
     id: String!
     name: String!
     fifaRanking: Int
@@ -41,7 +41,7 @@ type Club {
 }
 
 type Mutation {
-    createNationalTeam(input: NationalTeamInput!): NationalTeam
+    createNationalTeam(input: NationalTeamInput!): FootballTeam
 }
 
 input NationalTeamInput {
