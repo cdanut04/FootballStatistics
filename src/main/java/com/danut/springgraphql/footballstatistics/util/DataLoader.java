@@ -50,7 +50,6 @@ public class DataLoader {
 
     private NationalTeam buildItalyTeam() {
         Player italyCaptain = buildPlayer("Giorgio", "Chiellini",LocalDate.of(2004,11,17),"CENTRE-BACK", 112, 8, 36, 1.87, "Juventus", ITALY);
-        Player ciroImmobile = buildPlayer("Ciro", "Immobile", LocalDate.of(2014,3,5),"CENTRE-FORWARD",52, 15, 22, 1.85, "Lazio", ITALY);
         Player leonardoBonucci = buildPlayer("Leonardo", "Bonucci",LocalDate.of(2010,3,3),"CENTRE-BACK", 109, 8, 34, 1.90, "Juventus", ITALY);
 
         return NationalTeam.builder()
@@ -60,7 +59,7 @@ public class DataLoader {
                 .averageAge(28.7)
                 .captain(italyCaptain)
                 .coach(buildCoach("Roberto", "Mancini", 56, "Italian"))
-                .players(List.of(italyCaptain, ciroImmobile, leonardoBonucci))
+                .players(List.of(italyCaptain, leonardoBonucci))
                 .build();
     }
 

@@ -16,6 +16,7 @@ type FootballTeam {
     coach: Coach!
     captain: Player!
     players: [Player]!
+    totalMarketValue: Float
 }
 
 type Coach {
